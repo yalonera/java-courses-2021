@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  docker-java:
+    image: docker.pkg.github.com/nestor-by/java-courses-2021/java:0.0.1-artsymenia
+    environment:
+      NEXUS_URL: "https://maven.pkg.github.com/nestor-by/java-courses-2021"
+      NEXUS_USER: "nestor-by"
+      NEXUS_PASSWORD: "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"
+
+      JAVA_OPTS: "-server -Duser.timezone=Europe/Minsk -Dserver.port=8888"
+
+    volumes:
+      - "/opt/data/.m2/repository:/.m2"
+
+    networks:
+      - courses-network
