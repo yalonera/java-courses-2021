@@ -1,0 +1,9 @@
+# application.yml
+server:
+  port: 8085
+
+management:
+  endpoints:
+    web.exposure.include: '*'
+
+
