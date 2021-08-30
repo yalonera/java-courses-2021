@@ -1,0 +1,12 @@
+dependencies{
+  implementation 'io.projectreactor:reactor-core:3.4.5'
+  implementation "io.projectreactor.addons:reactor-extra:3.4.3"
+  testImplementation "org.junit.jupiter:junit-jupiter-engine:5.7.1"
+  testImplementation "io.projectreactor:reactor-test:3.4.5"
+  testImplementation "org.assertj:assertj-core:3.19.0"
+  testImplementation "org.mockito:mockito-core:3.9.0"
+}
+
+test {
+  useJUnitPlatform()
+}
