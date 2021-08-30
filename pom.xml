@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>by.sp.cources</groupId>
+  <artifactId>maven-modules</artifactId>
+  <version>0.0.1-ARTSYMENIA-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+    <!--    <module>part1</module>-->
+    <!--    <module>part2</module>-->
+    <!--    <module>part3</module>-->
+    <!--    <module>part4</module>-->
+    <!--        <module>part5</module>-->
+    <!--    <module>part6/service-api</module>-->
+    <!--    <module>part6/service1</module>-->
+    <!--    <module>part6/service2</module>-->
+    <!--    part7     -->
+    <module>part7/shop-customer</module>
+    <module>part7/shop-product</module>
+    <module>part7/shop-order</module>
+    <module>part7/shop-analytic</module>
+    <module>part7/shop-payment-info</module>
+    <!--    <module>part7/shop-order-graphql</module>-->
+  </modules>
+  <distributionManagement>
+    <repository>
+      <id>java-courses-2021</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/nestor-by/java-courses-2021</url>
+    </repository>
+  </distributionManagement>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.0</version>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.12.3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>2.12.3</version>
+    </dependency>
+    <dependency>
+      <groupId>io.projectreactor</groupId>
+      <artifactId>reactor-core</artifactId>
+      <version>3.4.5</version>
+    </dependency>
+    <dependency>
+      <groupId>io.projectreactor.addons</groupId>
+      <artifactId>reactor-extra</artifactId>
+      <version>3.4.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.7.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.projectreactor</groupId>
+      <artifactId>reactor-test</artifactId>
+      <version>3.4.5</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>3.19.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>3.9.0</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>

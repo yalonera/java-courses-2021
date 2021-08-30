@@ -1,0 +1,50 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+}
+
+apply plugin: 'idea'
+apply plugin: "maven"
+
+
+idea {
+  project {
+    jdkName = '1.8'
+    languageLevel = '1.8'
+  }
+}
+
+def javaProjects() {
+  return subprojects.findAll { new File(it.projectDir, "src").exists() }
+}
+
+configure(javaProjects()) {
+  apply plugin: "maven"
+  apply plugin: "java"
+
+  dependencies {
+  }
+
+  buildscript {
+    repositories {
+      mavenCentral()
+    }
+    dependencies {
+    }
+  }
+
+  repositories {
+    mavenCentral()
+  }
+
+
+  task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier 'sources'
+    from sourceSets.main.allSource
+  }
+
+  artifacts {
+    archives sourcesJar
+  }
+}
